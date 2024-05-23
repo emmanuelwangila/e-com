@@ -50,8 +50,8 @@ model DownloadVerification {
   id String @id @default(uuid())
   expiresAt  DateTime
   createdAt   DateTime  @default(now())
-  ProductId  String
-  product Product @relation(fields: [userId], references: [id], onDelete:Cascade)
+ productId  String
+  product Product @relation(fields: [productId], references: [id], onDelete:Cascade)
   
 
 }
