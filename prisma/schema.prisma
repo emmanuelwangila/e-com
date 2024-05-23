@@ -20,6 +20,7 @@ model Product {
   isAvailableForPurchase  Boolean @default(true)
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
+  orders Order[]
 }
 
 model User {
